@@ -18,6 +18,7 @@ control.addEventListener('mouseleave', (e) => {
 
 control.addEventListener('mousemove', (e) => {
 	if(isDown){
+		e.preventDefault();
 		let speedHeight = e.pageY-control.offsetTop;
 		speed.style.height = `${speedHeight}px`;
 		let videoRate = (control.offsetHeight - control.offsetTop) * speedHeight/10000;
